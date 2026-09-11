@@ -6,7 +6,7 @@ import os
 
 
 # Load environment variables from .env
-load_dotenv() 
+load_dotenv()
 
 
 # Database configuration
@@ -15,6 +15,14 @@ DB_PASSWORD = st.secrets["DB_PASSWORD"]
 DB_HOST = st.secrets["DB_HOST"]
 DB_PORT = st.secrets["DB_PORT"]
 DB_NAME = st.secrets["DB_NAME"]
+
+
+# Check data types (does NOT show password)
+print("DB_USER:", type(DB_USER))
+print("DB_PASSWORD:", type(DB_PASSWORD))
+print("DB_HOST:", type(DB_HOST))
+print("DB_PORT:", type(DB_PORT))
+print("DB_NAME:", type(DB_NAME))
 
 
 # Encode password safely
